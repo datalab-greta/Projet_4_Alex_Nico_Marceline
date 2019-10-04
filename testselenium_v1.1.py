@@ -64,7 +64,8 @@ config['mooc']['user']
 
 driver.find_element_by_name("submit").click()
 
-
 driver.find_element_by_name('email').send_keys(config['mooc']['user'] )
 driver.find_element_by_name('password').send_keys(config['mooc']['password'])
-driver.find_element_by_name('loginbutton').click()
+driver.find_element_by_id('submit').click()
+
+#login=driver.find_element_by_css_selector('.loginbutton-').click() 
