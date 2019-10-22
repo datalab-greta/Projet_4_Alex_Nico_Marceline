@@ -18,6 +18,7 @@ mydb<- dbConnect(drv, user=user1, password=password1, dbname=Dt, host=host)
 DBI::dbListTables(mydb)
 
 selection= DBI::fetch(dbSendQuery(mydb, "SELECT * FROM mooc_grp_man.nicolas2 ORDER BY date"), n=-1)
+#Select2=DBI::fetch(dbSendQuery(mydb, "SELECT course_id, date FROM mooc_grp_man.nicolas2 ORDER BY date"), n=-1)
 
 #-----------Pour la déconnection!-----------------------
 dbDisconnect(mydb)
@@ -35,6 +36,15 @@ S_fillBG<-ggplot2::scale_fill_manual(values=Col_S)
 coulBG<-ggplot2::scale_color_manual(values=Colours)
 L_coulBG<-ggplot2::scale_color_manual(values=Col_L)
 S_coulBG<-ggplot2::scale_color_manual(values=Col_S)
+
+#-------test général---------
+
+Select2<-selection
+Select2$date<-substr(Select2$date, 0, 10)
+Select2$date<-as.Date(Select2$date)
+
+Global<-ggplot2::ggplot(Select2) + geom_bar(aes(x=date, fill=date))
+Global 
 
 #-------Nombre de messages par année-------
 Dates<-selection %>%
