@@ -1,5 +1,6 @@
 library(tidyverse)
 library(config)
+library(DBI)
 library(RPostgreSQL)
 library(ggplot2)
 #Définition du chemin du dossier config.rml (à créer avant)
@@ -43,8 +44,37 @@ Select2<-selection
 Select2$date<-substr(Select2$date, 0, 10)
 Select2$date<-as.Date(Select2$date)
 
-Global<-ggplot2::ggplot(Select2) + geom_bar(aes(x=date, fill=date))
-Global 
+# Global<-ggplot2::ggplot(Select2) + geom_bar(aes(x=date, fill=date))
+# Global + ggplot2::ggtitle("Nombre de résultats entre 2014 et 2019") + scale_x_discrete
+#library(ggplot2)
+
+Global<-ggplot(Select2) + 
+  aes(x = date) +
+  geom_bar(fill = "#a50f15") +
+  labs(x = "Années", y = "Nombre", title = "Nombre de résultats", subtitle = "2014 à 2019") +
+  theme_minimal()
+Global
+
+#--------Tri données---------
+##--------2014_2015----
+Select2014 <- Select2 %>%
+ filter(date >= "2014-02-03" & date <= "2015-06-27")
+
+Années14_15<-ggplot(Select2014) +
+ aes(x = date) +
+ geom_histogram(bins = 30L, fill = "#ef3b2c") +
+ theme_minimal()
+Années14_15
+
+##---------2015-2016-------
+Select2015 <- Select2 %>%
+  filter(date >= "2015-06-27" & date <= "2016-12-10")
+
+Années15_16<-ggplot(Select2015) +
+  aes(x = date) +
+  geom_histogram(bins = 30L, fill = "darkblue") +
+  theme_minimal()
+Années15_16
 
 #-------Nombre de messages par année-------
 Dates<-selection %>%
@@ -53,7 +83,7 @@ Dates<-selection %>%
 Dates$date<-substr(Dates$date, 0, 4)
 
 
-plot1<-ggplot2::ggplot(Dates)+ geom_col(aes(x= date, y=Nombre, fill=date)) + S_fillBG + ggplot2::labs(title ="Nombre de messages de 2014 à 2019", x = "Dates", y="Nombre de messages")
+plot1<-ggplot2::ggplot(Dates)+ geom_col(aes(x= date, y=Nombre, fill=date)) + S_fillBG + ggplot2::labs(title ="Nombre de messages de 2014 à 2019", x = "Années", y="Nombre de messages")
 plot1
 
 #----Dataframes des plots
