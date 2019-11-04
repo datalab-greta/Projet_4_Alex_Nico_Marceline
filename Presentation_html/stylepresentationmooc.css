@@ -1,0 +1,65 @@
+#header{
+	
+    background-color:bg-dark;
+	
+}	
+
+img {
+	max-width: 100%;
+	height: auto;
+	
+}
+nav ul {
+	text-transform: upercase;
+	font-size: 1.1em;
+	font-weight: bold;				 	/* texte en gras*/
+	padding: 5px 20px;
+	font-size: 30px;
+
+}
+
+h1  {
+ font-size: 65px; 
+ color: navy; 
+ text-align: center;
+ font-weight: bold;
+ }
+
+div.row h2{
+ font-size: 70px; 
+ color: navy; 
+ text-align: center;
+}
+
+footer{
+	color:navy;
+	text-align: center;
+	font-size: 25px;
+}
+
+div.row ul li{
+	font-size: 30px;
+}
+
+#dea{
+	color: white;
+	margin-right:5%;
+	margin-left:5%;
+	border-radius:  50% 50% / 50% 50%;
+	
+}
+#dea p{
+	font-size:30px;
+}
+#dea h1{
+	color: white;
+	font-weight: bold;
+}
+footer{
+	color: red;
+	border-radius:  50% 50% / 50% 50%;
+}
+footer p{
+	font-size: 40px;
+	color: white;
+}

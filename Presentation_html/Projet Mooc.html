@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Projet 4 - Les Moocs- </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="stylepresentationmooc.css" rel="stylesheet" type="text/css">
+
+</head>  <!-------------------- debut du head ------------------------------------------->
+<body>	<!-------------------- debut  du body ------------------------------------------->
+
+<div id = "header" class="jumbotron text-center" style="margin-bottom:0">  <!------------------------------------ début de l'entête ------------------------------------->
+    <h1 class="display-1" style="color:red"; font-weight="bold" >Projet 4 - MOOC</h1>
+	<p class="display-2"style="color:blue";>Marceline - Alexandre - Nicolas</p> 
+	 
+	
+</div>																								 <!------------------------------------ fin de l'entête ------------------------------------->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">  <!------------------------------------ début de nav ------------------------------------->
+  <a class="navbar-brand" href="#">Librairies / codes</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="images/connection selenuim.png"target="_blank">Sélénuim</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="images/config parser pyhon.png"target="_blank">Codes Parser Python</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="images/config parser R.png"target="_blank">Codes parser R</a>
+				</li>    
+				<li class="nav-item">
+					<a class="nav-link" href="images/code R barplot.png"target="_blank">Codes barplot ggplot 2 </a>
+				</li>    
+				<li class="nav-item">
+					<a class="nav-link" href="images/code R barplot.png"target="_blank">Codes coquillages ggplot 2 </a>
+				</li>    
+			</ul>
+		</div>  
+</nav>								 <!------------------------------------ fin de nav ------------------------------------->
+ 
+  	<div  id="dea" style ="margin-top:30px " class="jumbotron text-center bg-dark">
+		<h1>1) Présentation du Projet :</h1>
+		<p >Le but de ce projet était de pouvoir découvrir l'importation de fichiers Json dans la base de données non-relationnelle Mongo DB, puis d'applatir les données afin d'implémenter la base de donnée Postgrès et d'en faire une analyse.</p>
+	</div>
+  
+  
+  <div class="row">		 <!------------------------------------ Début du row ------------------------------------->
+  
+	
+    <div class="col-md-2" ; padding>		 <!------------------------------------ Début de la 1er colonne ------------------------------------->
+		<h2>2) Selenium</h2>
+			<ul>
+				<li class="list-group-item">
+					<img src="images/sele-py.png"  href="images/"target="_blank",alt="selenium/python" >
+				</li>
+			</ul>
+		
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">
+					Mises en place des librairies
+				</li>
+				<li class="list-group-item">
+					Utilisation de l'url Mooc.fr
+				</li>
+				<li class="list-group-item">
+					1er boucle de connexion
+				</li>
+				<li class="list-group-item">
+					Mise en place du config parser
+				</li>
+				<li class="list-group-item">
+					Récupération des cookies avec Pickle
+				</li>
+				<li class="list-group-item">
+					Sélection des premiers clics avec le "css-selector"
+				</li>
+				<li class="list-group-item">
+					Boucle de récupération des URL et ID.
+				</li>
+			</ul>
+	</div>	 <!------------------------------------ Fin de la 1er colonne ------------------------------------->
+  	
+	<div class="col-md-5" >		<!------------------------------------ Début de la 2e colonne ------------------------------------->
+		<h2>3) Protection et import des données Mongo </h2>
+			
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				<p style="font-size:40px"> Sécurité des données Mongo </p>
+				<img src="images/Connectionmongo.png" alt="connection de mongo" >
+			</li>
+			<li class="list-group-item">
+				<p style="font-size:40px"> La table sur Mongo </p>
+				<img src="images/Mongo_table.png" alt="table de mongo" >
+			</li>
+			<li class="list-group-item">
+				<p style="font-size:40px"> Le contenu de la table Mongo </p>
+				<img src="images/Resultmongo.png" alt="table de mongo" >
+			</li>
+		</ul>
+	<h2>4) Protection et import des données PGAdmin</h2>
+				<p style="font-size:40px">Sécurité des données</p>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				
+				<img src="images/Pg_droits.png"  href="images/code R barplot.png"target="_blank",alt="BDD  PGAdmin" >
+			</li>
+			<li class="list-group-item">
+				<p style="font-size:40px"> La table sur Postgrès </p>
+				<img src="images/table-pg.png" alt="#" >
+			</li>
+			<li class="list-group-item">
+				<p style="font-size:40px"> Le contenu de la base PG </p>
+				<img src="images/Pg_contenutable.png" alt="#" >
+			</li>
+		</ul>
+	</div>						<!------------------------------------ Fin de la 2e colonne ------------------------------------->
+		
+	<div class="col-md-5" >		<!------------------------------------ Début de la 3e colonne ------------------------------------->
+			<h2>5) Dataviz</h2>
+					<p style="font-size:40px">L'ensemble des moocs de 2014/2019 </p>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">
+					<img src="images/vue_ensemble.png" alt="#" >
+					<a class="bouton"href="images/Codeglobal.png">codes</a>	
+				</li>
+				
+					<p style="font-size:40px">Le nombre de messages de 2014/2019 </p>
+				<li class="list-group-item">
+					<img src="images/Messages2014_2019.png" alt="#" >
+					<a class="bouton"href="images/Nbremessages.png"target="_blank">codes</a>	
+				</li>
+				
+					<p style="font-size:40px">Comparaison des thread  </p>
+				<li class="list-group-item">
+					<img src="images/Compthrad.png" alt="#" >
+					<a class="bouton"href="images/Comparaisonqd.png"target="_blank">codes</a>	
+				</li>
+				
+					<p style="font-size:40px">Nombre de questions et de discussions de 2014/2019 </p>
+				<li class="list-group-item">
+					<img src="images/2014_2019Q_D.png" alt="#" >
+					<a class="bouton"href="images/Nbreqd.png"target="_blank">codes</a>	
+				</li>
+		
+					<p style="font-size:40px">Top 20 questions et discussions par cours </p>
+				<li class="list-group-item">
+					<img src="images/top20mix.png" alt="#" >
+					<a class="bouton"href="images/Mix20.png"target="_blank">codes</a>	
+				</li>
+			
+					<p style="font-size:40px">Top 20 discussions par cours</p>
+				<li class="list-group-item">
+					<img src="images/top20discuss.png" alt="#" >
+					<a class="bouton"href="images/top20di.png"target="_blank">codes</a>	
+				</li>
+			
+					<p style="font-size:40px">Top 20 des questions par cours</p>
+				<li class="list-group-item">
+					<img src="images/coquillage.png" alt="#" >
+					<a class="bouton"href="images/top20qu.png"target="_blank">codes</a>	
+				</li>
+			</ul>
+	</div>	<!------------------------------------ Fin de la 3e colonne ------------------------------------->
+</div>   <!------------------------------------ Fin du row ------------------------------------->
+
+
+<footer class="jumbotron text-center bg-dark" style="margin-bottom:0">
+	<article>
+		<h3 style="font-size:80px">6) Conclusion</h3>
+			<p > Projet intérressant, on a pu décrouvrir Mongo. Mais cela dit projet intense et confus comme le projet 2. </p>
+	</article>	
+</footer>
+
+</body>
+</html>
